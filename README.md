@@ -11,7 +11,8 @@ The Makefile is self-documented. It means, that by running `make` it will print 
 
 ```shell
 ❯ make
-build      Build a docker image tagged mysql-devenv
+build      Build a docker image tagged mysql-devenv (for Debian)
+build.ol9  Build a docker image for building tagged mysql-devenv.ol9 (for Oracle Linux 9) suitable for normal builds but also building rpms
 shell      Execute bash inside the container in interactive mode
 start      Start a docker container in background from mysql-devenv
 stop       Stop the docker container
@@ -42,6 +43,15 @@ It is highly recommended that you switch to "VirtioFS" ([See this article](https
 
 ```shell
 ❯ make shell
+```
+
+## Override default settings:
+
+```shell
+# build using OL9 build environment using a different mysql-server path
+# variables could be exported once with export PROJECT_DIR=..., IMAGE_TAG=...
+PROJECT_DIR=~/src/mysql-server IMAGE_TAG=mysql-devenv.ol9 make start
+PROJECT_DIR=~/src/mysql-server IMAGE_TAG=mysql-devenv.ol9 make shell
 ```
 
 - Hack!
