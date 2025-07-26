@@ -12,7 +12,6 @@ The Makefile is self-documented. It means, that by running `make` it will print 
 ```shell
 ❯ make
 build      Build a docker image tagged mysql-devenv (for Debian)
-build.ol9  Build a docker image for building tagged mysql-devenv.ol9 (for Oracle Linux 9) suitable for normal builds but also building rpms
 shell      Execute bash inside the container in interactive mode
 start      Start a docker container in background from mysql-devenv
 stop       Stop the docker container
