@@ -49,9 +49,9 @@ It is highly recommended that you switch to "VirtioFS" ([See this article](https
 ```shell
 # build using OL9 build environment using a different mysql-server path
 # variables could be exported once with export DOCKER_FILE=..., PROJECT_DIR=..., IMAGE_TAG=...
-DOCKER_FILE=Dockerfile.ol9 PROJECT_DIR=~/src/mysql-server make build
-PROJECT_DIR=~/src/mysql-server make start
-PROJECT_DIR=~/src/mysql-server make shell
+DOCKER_FILE=Dockerfile.ol9 make build       # build setup for OL9
+PROJECT_DIR=~/src/mysql-server make start   # start docker image using source at given location
+make shell                                  # jump into docker build image
 ```
 
 - Hack!
