@@ -29,12 +29,12 @@ RUN yum update -y && \
 		perl-JSON rpcgen \
 		rpm-build \
 		time \
-        gcc-toolset-14-annobin-annocheck \
-        gcc-toolset-14-annobin-plugin-gcc \
-        gcc-toolset-14-binutils \
+		gcc-toolset-14-annobin-annocheck \
+		gcc-toolset-14-annobin-plugin-gcc \
+		gcc-toolset-14-binutils \
 		gcc-toolset-14-dwz \
-        gcc-toolset-14-gcc \
-        gcc-toolset-14-gcc-c++ \
+		gcc-toolset-14-gcc \
+		gcc-toolset-14-gcc-c++ \
 		wget \
 		zlib-devel
 
