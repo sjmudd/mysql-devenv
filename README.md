@@ -46,10 +46,17 @@ It is highly recommended that you switch to "VirtioFS" ([See this article](https
 
 ## Override default settings:
 
+Building on a different OS may be complex. Oracle's build on Oracle Linux requires a specific
+toolchain to work and checks for this so a couple of OL9 specific Dockerfiles have been created
+depending on the version of MySQL you are building:
+
+- `Dockerfile.ol9.mysql-8.0` for building MySQL 8.0.
+- `Dockerfile.ol9.mysql-9.4.0` for building MySQL 9.4.0.
+
 ```shell
-# build using OL9 build environment using a different mysql-server path
+# build using a specific Dockerfile for a specific MySQL version:
 # variables could be exported once with export DOCKER_FILE=..., PROJECT_DIR=..., IMAGE_TAG=...
-DOCKER_FILE=Dockerfile.ol9 make build       # build setup for OL9
+DOCKER_FILE=Dockerfile.ol9-mysql-9.4.0 make build       # build setup for OL9 MySQL 9.4.0 build
 PROJECT_DIR=~/src/mysql-server make start   # start docker image using source at given location
 make shell                                  # jump into docker build image
 ```
