@@ -1,5 +1,5 @@
 FROM oraclelinux:9
-LABEL org.opencontainers.image.authors="sjmudd@pobox.com"
+LABEL org.opencontainers.image.authors="malderete@gmail.com"
 LABEL description="MySQL DEV environment (OL9)"
 
 

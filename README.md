@@ -11,7 +11,7 @@ The Makefile is self-documented. It means, that by running `make` it will print 
 
 ```shell
 ❯ make
-build      Build a docker image tagged mysql-devenv (default: Debian)
+build      Build a docker image tagged mysql-devenv
 shell      Execute bash inside the container in interactive mode
 start      Start a docker container in background from mysql-devenv
 stop       Stop the docker container

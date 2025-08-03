@@ -7,7 +7,7 @@ DOCKER_FILE ?= Dockerfile.debian
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-10s\033[0m %s\n", $$1, $$2}'
 
-build: ## Build a docker image tagged mysql-devenv
+build: ## Build a docker image tagged mysql-devenv (default: Debian)
 	docker build . -f $(DOCKER_FILE) -t $(IMAGE_TAG)
 
 start: ## Start a docker container in background from mysql-devenv
